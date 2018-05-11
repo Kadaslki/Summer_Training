@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<style>
+			body{background-color: lightblue;}
+			h1{border-bottom: solid 3px}
+			th{
+				color: white;
+				background-color: #4CAF50
+			}
+			input[type="text"]{
+				width:100%;
+				box-sizing: border-box;
+			}
+			input[type="date"]{
+				width=100%;
+				box-sizing: border-box;
+			}
+		</style>
+		
+		<div class="container-fluid">
+			<form method="post" action="cv.php">
+				<h1> Curriculum Vitae Form</h1>
+				<table>
+					<tr>
+						<th colspan="10"><h3 align="center">Personal Information</td>
+					</tr>
+					<tr>
+						<td>Name:</td> 
+						<td><input type="text" name="name" size="35"></td>
+						<td>Admn No:</td> 
+						<td><input type="text" name="admnno"></td>
+					</tr>
+					<tr>
+						<td>Date of Birth:</td> 
+						<td><input type="date" name="dob"></td>
+						<td>Nationality:</td> 
+						<td><input type="text" name="nationality"></td>
+					</tr>
+					<tr>
+						<td>Gender:</td>
+						<td><input type="radio" name="gender" value="male" checked> Male 
+							<input type="radio" name="gender" value="female"> Female
+							<input type="radio" name="gender" value="other">Other</td>
+					</tr>
+					<tr>
+						<td>E-mail:</td>
+						<td><input type="text" name="email"></td>
+						<td>Skype Id:</td>
+						<td><input type="text" name="skypeid"></td>
+					</tr>
+					<tr>
+						<td>Mobile No:</td> 
+						<td><input type="text" name="mobno"></td>
+						<td>Category:</td> 
+						<td><input type="text" name="category"></td>
+					</tr>
+					<tr>
+						<td>Contact Address:</td>
+						<td><textarea name="caddress" rows="5" cols="30"></textarea></td>
+						<td>Permanent Address:</td>
+						<td><textarea name="paddress" rows="5" cols="30"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="10"><h3 align="center">Academic Details</td>
+					</tr>
+					<tr>
+						<th>Examination Passed</th>
+						<th>Board/University</th>
+						<th>Year of Passing</th>
+						<th>Percentage/CGPA</th>
+					</tr>
+					<tr>
+						<td><p align= "center">X</p></td>
+						<td><input type="text" name="boarduniv"></td>
+						<td><input type="text" name="year"></td>
+						<td><input type="text" name="percgpa"></td>
+					</tr>
+					<tr>
+						<td><p align= "center">XII</p></td>
+						<td><input type="text" name="boarduniv"></td>
+						<td><input type="text" name="year"></td>
+						<td><input type="text" name="percgpa"></td>
+					</tr>
+					<tr>
+						<td><p align= "center">Graduation</p></td>
+						<td><input type="text" name="boarduniv"></td>
+						<td><input type="text" name="year"></td>
+						<td><input type="text" name="percgpa"></td>
+					</tr>
+					<tr>
+						<td><td colspan="10"><h3 align="center">Experience</td>
+					</tr>
+					<tr>
+						<th>Sr.No</th>
+						<th>Organisation/ Institute</th>
+						<th>Start Date</th>
+						<th>End Date</th>
+					</tr>
+					<tr>
+						<td><p align= "center">1.</p></td>
+						<td><input type="text" name="insti"></td>
+						<td><input type="date" name="strdate"></td>
+						<td><input type="date" name="stpdate"></td>
+					</tr>
+					<tr>
+						<td><p align= "center">2.</p></td>
+						<td><input type="text" name="insti"></td>
+						<td><input type="date" name="strdate"></td>
+						<td><input type="date" name="stpdate"></td>
+					</tr>
+					<tr>
+					<tr>
+						<td><input type="submit" name="submit" value="Submit"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		
+	</body>
+</html> 
