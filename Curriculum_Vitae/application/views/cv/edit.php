@@ -26,22 +26,22 @@
 		</style>
 		
 		<div class="container-fluid">
-			<?php echo form_open('cv/create');?>
+			<?php echo form_open('cv/edit/'.$cv_item['admnno']);?>
 				<table>
 					<tr>
 						<th colspan="10"><h3 align="center">Personal Information</td>
 					</tr>
 					<tr>
 						<td>Name:</td> 
-						<td><input type="text" name="name" size="35"></td>
+						<td><input type="text" name="name" value=<?php echo $cv_item['name']?> size="35"></td>
 						<td>Admn No:</td> 
-						<td><input type="text" name="admnno"></td>
+						<td><input type="text" name="admnno" value=<?php echo $cv_item['admnno']?>></td>
 					</tr>
 					<tr>
 						<td>Date of Birth:</td> 
-						<td><input type="date" name="dob"></td>
+						<td><input type="date" name="dob" value=<?php echo $cv_item['dob']?>></td>
 						<td>Nationality:</td> 
-						<td><input type="text" name="nationality"></td>
+						<td><input type="text" name="nationality" value=<?php echo $cv_item['nationality']?>></td>
 					</tr>
 					<tr>
 						<td>Gender:</td>
@@ -51,21 +51,21 @@
 					</tr>
 					<tr>
 						<td>E-mail:</td>
-						<td><input type="text" name="email"></td>
+						<td><input type="text" name="email" value=<?php echo $cv_item['email']?>></td>
 						<td>Skype Id:</td>
-						<td><input type="text" name="skypeid"></td>
+						<td><input type="text" name="skypeid" value=<?php echo $cv_item['skypeid']?>></td>
 					</tr>
 					<tr>
 						<td>Mobile No:</td> 
-						<td><input type="text" name="mobno"></td>
+						<td><input type="text" name="mobno" value=<?php echo $cv_item['mobno']?>></td>
 						<td>Category:</td> 
-						<td><input type="text" name="category"></td>
+						<td><input type="text" name="category" value=<?php echo $cv_item['category']?>></td>
 					</tr>
 					<tr>
 						<td>Contact Address:</td>
-						<td><textarea name="caddress" rows="5" cols="30"></textarea></td>
+						<td><textarea name="caddress" rows="5" cols="30" placeholder=<?php echo $cv_item['caddress']?>></textarea></td>
 						<td>Permanent Address:</td>
-						<td><textarea name="paddress" rows="5" cols="30"></textarea></td>
+						<td><textarea name="paddress" rows="5" cols="30" placeholder=<?php echo $cv_item['paddress']?>></textarea></td>
 					</tr>
 					<tr>
 						<td colspan="10"><h3 align="center">Academic Details</td>
