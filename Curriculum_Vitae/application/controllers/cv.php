@@ -57,7 +57,9 @@
 					}
 					else{
 						$this->cv_model->edit_cv($admnno);
+						$this->load->view('templates/header',$data);
 						$this->load->view('cv/index');
+						$this->load->view('templates/footer');
 					}
 					
 			}
@@ -96,7 +98,9 @@
 					}
 					else{
 						$this->cv_model->set_cv();
+						$this->load->view('templates/header',$data);
 						$this->load->view('cv/index');
+						$this->load->view('templates/footer');
 					}
 			}
 	}
