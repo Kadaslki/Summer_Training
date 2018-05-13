@@ -10,7 +10,17 @@
 	<body>
 
 		<style>
-			h1{border-bottom: solid 3px}
+			h1{
+				background-color:  #337ab7;
+				color: white;
+				text-align: center
+			}
+			
+			h3{
+				color:white;
+				text-align:center
+			}
+			
 			th{
 				color: white;
 				background-color: lightblue
@@ -23,103 +33,216 @@
 				width=100%;
 				box-sizing: border-box;
 			}
+			
+			#footer {
+				background: #337ab7;
+				position:relative;
+				width:100%;
+				bottom:0
+			}
+			
+			.row{
+				background-color:#337ab7;
+			}
+			
 		</style>
 		
 		<div class="container-fluid">
 			<?php echo form_open('cv/create');?>
-				<table>
-					<tr>
-						<th colspan="10"><h3 align="center">Personal Information</td>
-					</tr>
-					<tr>
-						<td>Name:</td> 
-						<td><input type="text" name="name" size="35"></td>
-						<td>Admn No:</td> 
-						<td><input type="text" name="admnno"></td>
-					</tr>
-					<tr>
-						<td>Date of Birth:</td> 
-						<td><input type="date" name="dob"></td>
-						<td>Nationality:</td> 
-						<td><input type="text" name="nationality"></td>
-					</tr>
-					<tr>
-						<td>Gender:</td>
-						<td><input type="radio" name="gender" value="male" checked> Male 
-							<input type="radio" name="gender" value="female"> Female
-							<input type="radio" name="gender" value="other">Other</td>
-					</tr>
-					<tr>
-						<td>E-mail:</td>
-						<td><input type="text" name="email"></td>
-						<td>Skype Id:</td>
-						<td><input type="text" name="skypeid"></td>
-					</tr>
-					<tr>
-						<td>Mobile No:</td> 
-						<td><input type="text" name="mobno"></td>
-						<td>Category:</td> 
-						<td><input type="text" name="category"></td>
-					</tr>
-					<tr>
-						<td>Contact Address:</td>
-						<td><textarea name="caddress" rows="5" cols="30"></textarea></td>
-						<td>Permanent Address:</td>
-						<td><textarea name="paddress" rows="5" cols="30"></textarea></td>
-					</tr>
-					<tr>
-						<td colspan="10"><h3 align="center">Academic Details</td>
-					</tr>
-					<tr>
-						<th>Examination Passed</th>
-						<th>Board/University</th>
-						<th>Year of Passing</th>
-						<th>Percentage/CGPA</th>
-					</tr>
-					<tr>
-						<td><p align= "center">X</p></td>
-						<td><input type="text" name="boarduniv"></td>
-						<td><input type="text" name="year"></td>
-						<td><input type="text" name="percgpa"></td>
-					</tr>
-					<tr>
-						<td><p align= "center">XII</p></td>
-						<td><input type="text" name="boarduniv"></td>
-						<td><input type="text" name="year"></td>
-						<td><input type="text" name="percgpa"></td>
-					</tr>
-					<tr>
-						<td><p align= "center">Graduation</p></td>
-						<td><input type="text" name="boarduniv"></td>
-						<td><input type="text" name="year"></td>
-						<td><input type="text" name="percgpa"></td>
-					</tr>
-					<tr>
-						<td><td colspan="10"><h3 align="center">Experience</td>
-					</tr>
-					<tr>
-						<th>Sr.No</th>
-						<th>Organisation/ Institute</th>
-						<th>Start Date</th>
-						<th>End Date</th>
-					</tr>
-					<tr>
-						<td><p align= "center">1.</p></td>
-						<td><input type="text" name="insti"></td>
-						<td><input type="date" name="strdate"></td>
-						<td><input type="date" name="stpdate"></td>
-					</tr>
-					<tr>
-						<td><p align= "center">2.</p></td>
-						<td><input type="text" name="insti"></td>
-						<td><input type="date" name="strdate"></td>
-						<td><input type="date" name="stpdate"></td>
-					</tr>
-					<tr>
-					<tr>
-						<td><input type="submit" name="submit" value="Submit"></td>
-					</tr>
-				</table>
+				<div class="col-sm-12">
+					<div class='row'>
+							<h3>Personal Information</h3>
+					</div>
+					<div class="col-sm-6">				
+						<div class="form-group">
+							<label for="name">Name:</label>
+							<input type="text" class="form-control" name="name">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label for="admnno">Admno No:</label>
+							<input type="text" class="form-control" name="admnno">
+						</div>		
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+								<label for="dob">Date of Birth:</label>
+								<input type="date" class="form-control" name="dob">
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+								<label for="nationality">Nationality:</label>
+								<input type="text" class="form-control" name="nationality">
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="form-group">
+								<label for="gender">Gender:</label>
+								<input type="text" class="form-control" name="gender">
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+								<label for="email">E-mail:</label>
+								<input type="text" class="form-control" name="email">
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+								<label for="skypeid">Skype- Id:</label>
+								<input type="text" class="form-control" name="skypeid">
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+								<label for="mobno">Mobile No:</label>
+								<input type="text" class="form-control" name="mobno">
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="form-group">
+								<label for="category">Category:</label>
+								<input type="text" class="form-control" name="category">
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+								<label for="paddress">Permmanent Address:</label>
+								<textarea class="form-control" rows=5 name="paddress"></textarea>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="form-group">
+								<label for="caddress">Contact Address:</label>
+								<textarea class="form-control" rows=5 name="caddress"></textarea>
+						</div>
+					</div>	
+				</div>
+				
+				
+				<div class="col-sm-12">
+					<div class='row'>
+							<h3>Academic Details</h3>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="x">Examination Passed:</label>
+								<input type="text" class="form-control" value="X"disabled>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="xboard">Board/University:</label>
+								<input type="text" class="form-control" name="xboard">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="xyear">Year:</label>
+								<input type="text" class="form-control" name="xyear">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="xpercgpa">Percentage/CGPA:</label>
+								<input type="text" class="form-control" name="xpercgpa">
+						</div>
+					</div>
+					
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="xii">Examination Passed:</label>
+								<input type="text" class="form-control" value="XII"disabled>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="xiiboard">Board/University:</label>
+								<input type="text" class="form-control" name="xiiboard">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="xiiyear">Year:</label>
+								<input type="text" class="form-control" name="xiiyear">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="xiipercgpa">Percentage/CGPA:</label>
+								<input type="text" class="form-control" name="xiipercgpa">
+						</div>
+					</div>
+					
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="g">Examination Passed:</label>
+								<input type="text" class="form-control" value="Graduation"disabled>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="gboard">Board/University:</label>
+								<input type="text" class="form-control" name="gboard">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="gyear">Year:</label>
+								<input type="text" class="form-control" name="gyear">
+						</div>
+					</div>
+					<div class='col-sm-2'>
+						<div class="form-group">
+								<label for="gpercgpa">Percentage/CGPA:</label>
+								<input type="text" class="form-control" name="gpercgpa">
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-12">
+					<div class='row'>
+							<h3>Experience</h3>
+					</div>
+					<div class="form-group">
+							<label for="xp">Write about your experiences in separate lines:</label>
+							<textarea class="form-control" rows=5 name="xp"></textarea>
+					</div>				
+				</div>
+				
+				<div class="col-sm-12">
+					<div class='row'>
+							<h3>Other Details</h3>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="achievements">Achievements::</label>
+								<textarea class="form-control" rows=5 name="achievements"></textarea>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="skills">Technical Skills::</label>
+								<textarea class="form-control" rows=5 name="skills"></textarea>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="interests">Interests/Hobbies::</label>
+								<textarea class="form-control" rows=5 name="interests"></textarea>
+						</div>
+					</div>
+					<div class='col-sm-6'>
+						<div class="form-group">
+								<label for="aoi">Any Other Information::</label>
+								<textarea class="form-control" rows=5 name="aoi"></textarea>
+						</div>
+					</div>
+				</div>
+				
+				<input type="submit" name="submit" value="Submit"></td>
 			</form>
 		</div>
 		

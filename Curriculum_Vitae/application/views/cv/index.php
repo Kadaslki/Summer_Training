@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	  <title>Bootstrap Example</title>
+	  <title>Curriculum Vitae Maintainer</title>
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,11 +13,12 @@
 		
 		<style>
 		
-		h2{
-			border-bottom: solid 3px black;
-			background-color:  lightblue;
+		h1{
+				background-color:  #337ab7;
+				color: white;
+				align: center
 		}
-		
+			
 		button{
 			background-color: white; 
 			border: 2px solid lightblue;
@@ -31,6 +32,7 @@
 			width:100%;
 			-webkit-transition-duration: 0.4s;
 			transition-duration: 0.4s;
+			align: center
 		}
 		
 		button:hover{	background-color: lightblue;	}
@@ -41,26 +43,28 @@
 		
 		<div class="jumbotron">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<button>
-							<a href="http://localhost:8888/cv/index.php/cv/create">Create CV</a>
-						</button>
+				<div class=col-lg-12>
+					<div class="row">
+					
+						<div class="col-sm-4">
+							<button>
+								<a href="http://localhost:8888/cv/index.php/cv/create">Create CV</a>
+							</button>
+						</div>
+					
+						<div class="col-sm-4">
+							<button>
+								<a href="http://localhost:8888/cv/index.php/cv/select">Edit CV</a>
+							</button>
+						</div>
+						
+						<div class="col-sm-4">
+							<button>
+								<a href="http://localhost:8888/cv/index.php/cv/viewall">View CV</a>
+							</button>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<button>
-							<a href="http://localhost:8888/cv/index.php/cv/select">Edit CV</a>
-						</button>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<button>
-							<a href="http://localhost:8888/cv/index.php/cv/viewall">View CV</a>
-						</button>
-					</div>
+					
 				</div>
 			</div>
 		</div>
