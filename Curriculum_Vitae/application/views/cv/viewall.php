@@ -8,7 +8,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-	
 	<style>
 	h1{
 		background-color:  #337ab7;
@@ -19,7 +18,6 @@
 		list-style-type: square;
 	}
 	</style>
-
 	<?php foreach ($cv as $cv_item): ?>
 		<ul>
 			<li><a href="http://localhost:8888/cv/index.php/cv/view/<?php echo $cv_item['admnno']?>"><?php echo $cv_item['name'] ?></a>

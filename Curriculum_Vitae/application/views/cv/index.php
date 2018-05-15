@@ -42,30 +42,33 @@
 		</style>
 		
 		<div class="jumbotron">
-			<div class="container">
-				<div class=col-lg-12>
-					<div class="row">
-					
-						<div class="col-sm-4">
-							<button>
-								<a href="http://localhost:8888/cv/index.php/cv/create">Create CV</a>
-							</button>
+			<div class="container" vertical-align= 'middle'>
+						<div class="row">
+							<div class="col-sm-4 col-sm-push-4">
+								<button>
+									<a href="http://localhost:8888/cv/index.php/cv/create">Create CV</a>
+								</button>
+							</div>
 						</div>
-					
-						<div class="col-sm-4">
-							<button>
-								<a href="http://localhost:8888/cv/index.php/cv/select">Edit CV</a>
-							</button>
+						<div class="row">
+							<div class="col-sm-4 col-sm-push-2">
+								<button>
+									<a href="http://localhost:8888/cv/index.php/cv/viewall">View CV</a>
+								</button>
+							</div>
+							<div class="col-sm-4 col-sm-push-2">
+								<button>
+									<a href="http://localhost:8888/cv/index.php/cv/select">Edit CV</a>
+								</button>
+							</div>
 						</div>
-						
-						<div class="col-sm-4">
-							<button>
-								<a href="http://localhost:8888/cv/index.php/cv/viewall">View CV</a>
-							</button>
-						</div>
-					</div>
-					
-				</div>
+						<div class="row">
+							<div class="col-sm-4 col-sm-push-4">
+								<button>
+									<a href="http://localhost:8888/cv/index.php/cv/delete">Delete CV</a>
+								</button>
+							</div>
+						</div>		
 			</div>
 		</div>
 		
