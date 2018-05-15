@@ -41,12 +41,14 @@
 //$route['default_controller'] = "welcome";
 //$route['404_override'] = '';
 
-$route['cv/edit/(:any)']='cv/edit/$1';
-$route['cv/select']='cv/select';
+$route['cv']='cv';
 $route['cv/create']='cv/create';
+$route['cv/select']='cv/select';
+$route['cv/edit/(:any)']='cv/edit/$1';
 $route['cv/viewall']='cv/viewall';
 $route['cv/view/(:any)']='cv/view/$1';
-$route['cv']='cv';
+$route['cv/delete/(:any)']='cv/delete/$1';
+$route['cv/delete']='cv/delete';
 
 $route['news/(:any)']='news/view/$1';
 $route['news']='news';
