@@ -1,15 +1,15 @@
 <?php	if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-	class cv_model extends CI_Model{
+	class cv_model extends CI_Model{													//Model class for CV Maintainer
 
-		public function __construct(){
+		public function __construct(){													//Constructor for loading database
 			$this->load->database();
 		}
 	
-		public function get_cv($admnno = FALSE){
-			if ($admnno === FALSE){
-				$query = $this->db->get('personal');
-				return $query->result_array();
+		public function get_cv($admnno = FALSE){										//Function return record by 'admnno'/ all records
+			if ($admnno === FALSE){														//Condition for unavailable 'admnno'
+				$query = $this->db->get('personal');									//Fetching record from table 'personal'
+				return $query->result_array();											//Returning records
 			}
 
 			//$this->db->select('p.*, a.*, x.*');
@@ -17,13 +17,13 @@
 			//$this->db->where('p.admnno = a.admnno');
 			//$this->db->where('a.admnno = x.admnno');
 			//$query = $this->db->get();
-			$query = $this->db->get_where('personal', array('admnno' => $admnno));
-			return $query->row_array();
+			$query = $this->db->get_where('personal', array('admnno' => $admnno));		//Making query
+			return $query->row_array();													//Returning record by 'admnno'
 		}
 		
-		public function set_cv(){
-			$this->load->helper('url');
-			$data = array(
+		public function set_cv(){														//Funtion for inserting a record in table
+			$this->load->helper('url');													//Loading URL Helper class
+			$data = array(																//Making data array
 				'name' => $this->input->post('name'),
 				'admnno' => $this->input->post('admnno'),
 				'dob' => $this->input->post('dob'),
@@ -50,12 +50,12 @@
 				'interests' => $this->input->post('interests'),
 				'aoi' => $this->input->post('aoi')
 			);
-			return $this->db->insert('personal', $data);
+			return $this->db->insert('personal', $data);								//Insert data array in 'personal' table									
 		}
 		
-		public function edit_cv($admnno){
-				$data = array(
-					'name' => $this->input->post('name'),
+		public function edit_cv($admnno){												//Function for record updation
+				$data = array(						
+				'name' => $this->input->post('name'),
 				'admnno' => $this->input->post('admnno'),
 				'dob' => $this->input->post('dob'),
 				'gender' => $this->input->post('gender'),
@@ -82,8 +82,14 @@
 				'aoi' => $this->input->post('aoi')			
 				);
 				$this->db->where('admnno',$admnno);
-				$this->db->update('personal',$data);
+				$this->db->update('personal',$data);									//Record updation
 		}
+		
+		public function delete_cv($admnno){												//Function for record deletion
+				$this->db->where('admnno', $admnno);									//Selecting record on the basis of 'admnno'
+				$this->db->delete('personal');											//Delete record
+		}
+		
 	}
 	
 ?>	
